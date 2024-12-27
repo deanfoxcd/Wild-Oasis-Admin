@@ -20,7 +20,9 @@ export default function App() {
             <div>
               <Heading as='h2'>Check in/out</Heading>
               <Button>Check in</Button>
-              <Button>Check out</Button>
+              <Button variation='secondary' size='small'>
+                Check out
+              </Button>
             </div>
           </Row>
 
