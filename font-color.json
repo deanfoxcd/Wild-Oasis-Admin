@@ -1,0 +1,10 @@
+"editor.tokenColorCustomizations": {
+  "textMateRules": [
+    {
+      "scope": ["source.css.scss entity.name.tag"],
+      "settings": {
+        "foreground": "#BBBBBB"
+      }
+    }
+  ]
+}
