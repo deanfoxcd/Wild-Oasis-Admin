@@ -8,6 +8,7 @@ import Button from '../../ui/Button';
 import FileInput from '../../ui/FileInput';
 import Textarea from '../../ui/Textarea';
 import FormRow from '../../ui/FormRow';
+
 import { createCabin, editCabin } from '../../services/apiCabins';
 
 function CreateCabinForm({ cabinToEdit = {} }) {
@@ -18,6 +19,7 @@ function CreateCabinForm({ cabinToEdit = {} }) {
     defaultValues: isEditSession ? editValues : {},
   });
   const { errors } = formState;
+
   const queryClient = useQueryClient();
 
   const { mutate, isLoading: isCreating } = useMutation({
@@ -36,16 +38,6 @@ function CreateCabinForm({ cabinToEdit = {} }) {
       toast.error(err.message);
     },
   });
-
-  // const { mutate: edit, isEditing } = useMutation({
-  //   mutationFn: ({ newCabinData }) => editCabin(newCabinData),
-  //   onSuccess: () => {
-  //     toast.success('Cabin updated successfully');
-  //     queryClient.invalidateQueries(['cabins']);
-  //     reset();
-  //   },
-  //   onError: (err) => toast.error(err.message),
-  // });
 
   function onSubmit(data) {
     console.log(data);
