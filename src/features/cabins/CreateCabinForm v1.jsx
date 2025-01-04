@@ -10,13 +10,8 @@ import Textarea from '../../ui/Textarea';
 import FormRow from '../../ui/FormRow';
 import { createCabin } from '../../services/apiCabins';
 
-function CreateCabinForm({ cabinToEdit = {} }) {
-  const { id: editId, ...editValues } = cabinToEdit;
-  const isEditing = Boolean(editId);
-
-  const { register, handleSubmit, reset, getValues, formState } = useForm({
-    defaultValues: isEditing ? editValues : {},
-  });
+function CreateCabinForm() {
+  const { register, handleSubmit, reset, getValues, formState } = useForm();
   const { errors } = formState;
   const queryClient = useQueryClient();
 
@@ -103,9 +98,7 @@ function CreateCabinForm({ cabinToEdit = {} }) {
         <FileInput
           id='image'
           accept='image/*'
-          {...register('image', {
-            required: isEditing ? false : 'This field is required',
-          })}
+          {...register('image', { required: 'This field is required' })}
         />
       </FormRow>
 
@@ -114,9 +107,7 @@ function CreateCabinForm({ cabinToEdit = {} }) {
         <Button variation='secondary' type='reset'>
           Cancel
         </Button>
-        <Button disabled={isLoading}>
-          {isEditing ? 'Edit Cabin' : 'Add cabin'}
-        </Button>
+        <Button disabled={isLoading}>Add cabin</Button>
       </FormRow>
     </Form>
   );
