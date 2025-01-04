@@ -10,6 +10,7 @@ import Textarea from '../../ui/Textarea';
 import FormRow from '../../ui/FormRow';
 
 import { createCabin, editCabin } from '../../services/apiCabins';
+import useAddEditCabin from './useAddEditCabin';
 
 function CreateCabinForm({ cabinToEdit = {} }) {
   const { id: editId, ...editValues } = cabinToEdit;
@@ -20,24 +21,26 @@ function CreateCabinForm({ cabinToEdit = {} }) {
   });
   const { errors } = formState;
 
-  const queryClient = useQueryClient();
+  const { isCreating, mutate } = useAddEditCabin(isEditSession);
 
-  const { mutate, isLoading: isCreating } = useMutation({
-    mutationFn: isEditSession ? editCabin : createCabin,
-    onSuccess: () => {
-      toast.success(
-        isEditSession
-          ? 'Cabin updated successfully'
-          : 'Cabin created successfully'
-      );
-      queryClient.invalidateQueries(['cabins']);
-      reset();
-    },
-    onError: (err) => {
-      console.log(err);
-      toast.error(err.message);
-    },
-  });
+  // const queryClient = useQueryClient();
+
+  // const { mutate, isLoading: isCreating } = useMutation({
+  //   mutationFn: isEditSession ? editCabin : createCabin,
+  //   onSuccess: () => {
+  //     toast.success(
+  //       isEditSession
+  //         ? 'Cabin updated successfully'
+  //         : 'Cabin created successfully'
+  //     );
+  //     queryClient.invalidateQueries(['cabins']);
+  //     reset();
+  //   },
+  //   onError: (err) => {
+  //     console.log(err);
+  //     toast.error(err.message);
+  //   },
+  // });
 
   function onSubmit(data) {
     console.log(data);
@@ -48,10 +51,6 @@ function CreateCabinForm({ cabinToEdit = {} }) {
     } else {
       mutate({ ...data, image: image });
     }
-
-    // if (isEditSession) edit({ newCabinData: { ...data, image } });
-    // else create({ ...data, image });
-    // console.log(data);
   }
 
   function onError(errors) {
