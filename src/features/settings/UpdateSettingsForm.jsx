@@ -4,7 +4,6 @@ import Input from '../../ui/Input';
 import useSettings from './useSettings';
 import Spinner from '../../ui/Spinner';
 import useEditSettings from './useEditSettings';
-import { useForm } from 'react-hook-form';
 
 export default function UpdateSettingsForm() {
   const {
