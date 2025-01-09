@@ -7,15 +7,15 @@ function useBookingDetail() {
   const { bookingId } = useParams();
 
   const {
-    isLoading,
+    isPending,
     data: booking,
     error,
   } = useQuery({
-    queryKey: ['booking'],
+    queryKey: ['booking', bookingId],
     queryFn: () => getBooking(bookingId),
     retry: false,
   });
-  return { isLoading, error, booking };
+  return { isPending, error, booking };
 }
 
 export default useBookingDetail;

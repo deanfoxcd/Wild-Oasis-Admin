@@ -20,12 +20,12 @@ const HeadingGroup = styled.div`
 `;
 
 function BookingDetail() {
-  const { booking, isLoading } = useBookingDetail();
+  const { booking, isPending } = useBookingDetail();
   const navigate = useNavigate();
 
   const moveBack = useMoveBack();
 
-  if (isLoading) return <Spinner />;
+  if (isPending) return <Spinner />;
 
   const { status, id: bookingId } = booking;
 
