@@ -1,6 +1,7 @@
 import { useMutation } from '@tanstack/react-query';
-import { signUp } from '../../services/apiAuth';
 import toast from 'react-hot-toast';
+
+import { signUp } from '../../services/apiAuth';
 
 function useSignUp() {
   const { mutate: signUpMutate, isPending: isSigningUp } = useMutation({
