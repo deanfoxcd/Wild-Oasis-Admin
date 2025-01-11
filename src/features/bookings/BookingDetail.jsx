@@ -12,7 +12,7 @@ import Spinner from '../../ui/Spinner';
 import { useMoveBack } from '../../hooks/useMoveBack';
 import useBookingDetail from './useBookingDetail';
 import { useNavigate } from 'react-router-dom';
-import { HiArrowUpOnSquare, HiTrash } from 'react-icons/hi2';
+import { HiArrowUpOnSquare } from 'react-icons/hi2';
 import useCheckout from '../check-in-out/useCheckout';
 import Modal from '../../ui/Modal';
 import ConfirmDelete from '../../ui/ConfirmDelete';
@@ -70,15 +70,6 @@ function BookingDetail() {
             Check Out
           </Button>
         )}
-
-        {/* <Button
-          icon={<HiTrash />}
-          onClick={() => checkout(bookingId)}
-          disabled={isCheckingOut}
-          $variation='danger'
-        >
-          Delete
-        </Button> */}
 
         <Modal>
           <Modal.Open opens='delete'>

@@ -10,9 +10,7 @@ import Menus from '../../ui/Menus';
 import {
   HiArrowDownOnSquare,
   HiArrowUpOnSquare,
-  HiCheck,
   HiEye,
-  HiPencil,
   HiTrash,
 } from 'react-icons/hi2';
 import { useNavigate } from 'react-router-dom';
