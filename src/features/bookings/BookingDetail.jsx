@@ -15,9 +15,9 @@ import useCheckout from '../check-in-out/useCheckout';
 import Modal from '../../ui/Modal';
 import ConfirmDelete from '../../ui/ConfirmDelete';
 import useDeleteBooking from './useDeleteBooking';
+import Empty from '../../ui/Empty';
 
 import { useMoveBack } from '../../hooks/useMoveBack';
-import Empty from '../../ui/Empty';
 
 const HeadingGroup = styled.div`
   display: flex;

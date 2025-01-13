@@ -121,12 +121,15 @@ function CabinRow({ cabin }) {
                 <Menus.Button
                   icon={<HiSquare2Stack />}
                   onClick={handleDuplicate}
+                  disabled={isWorking}
                 >
                   Duplicate
                 </Menus.Button>
 
                 <Modal.Open opens='edit'>
-                  <Menus.Button icon={<HiPencil />}>Edit</Menus.Button>
+                  <Menus.Button icon={<HiPencil />} disabled={isWorking}>
+                    Edit
+                  </Menus.Button>
                 </Modal.Open>
 
                 <Modal.Open opens='delete'>
