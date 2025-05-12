@@ -48,8 +48,8 @@ To run this project locally:
 3. **Set up environment variables**
    - Create a `.env.local` file and add your Supabase credentials:
      ```env
-     VITE_VITE_SUPABASE_URL=your-supabase-url
-     VITE_VITE_SUPABASE_KEY=your-supabase-key
+     VITE_SUPABASE_URL=your-supabase-url
+     VITE_SUPABASE_KEY=your-supabase-key
      ```
 4. **Start the development server**
    ```bash
