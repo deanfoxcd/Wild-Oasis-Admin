@@ -8,7 +8,7 @@ A modern, feature-rich internal admin platform for The Wild Oasis – a fictiona
 
 ## 🚀 Demo
 
-👉 [Visit the Wild Oasis Website](https://the-wildest-oasis.netlify.app/login)
+👉 [Visit the Wild Oasis Website](https://the-wildest-oasis-lime.vercel.app/)
 
 ---
 
