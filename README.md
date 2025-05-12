@@ -12,6 +12,15 @@ A modern, feature-rich internal admin platform for The Wild Oasis – a fictiona
 
 ---
 
+## 🧪 Test Credentials
+
+You can use the following credentials to log in for testing/demo purposes:
+
+- **Username:** `test@test.com`
+- **Password:** `password123`
+
+---
+
 ## ✨ Features
 
 - Secure user authentication and protected routes
