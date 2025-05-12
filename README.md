@@ -72,8 +72,7 @@ To run this project locally:
 
 ## ⚠️ Known Issues
 
-- Supabase credentials must be set up for full functionality.
-- _Add any other known issues here._
+- There is currently a **CORS issue** with Vercel and Supabase, so cabin images may not load. This is being investigated.
 
 ---
 
