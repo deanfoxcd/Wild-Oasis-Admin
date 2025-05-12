@@ -2,7 +2,7 @@
 
 [![React](https://img.shields.io/badge/React-2023-blue?logo=react&style=flat-square)](https://react.dev/) [![Vite](https://img.shields.io/badge/Built%20with-Vite-646CFF?logo=vite&style=flat-square)](https://vitejs.dev/)
 
-A modern, feature-rich internal admin platform for The Wild Oasis – a fictional luxury cabin resort. This Single Page Application (SPA) is used by staff to manage bookings, cabins, guests, and hotel operations. Built as part of the Modern React Course by Jonas Schmedtmann.
+A modern, feature-rich internal admin platform for The Wild Oasis – a fictional luxury cabin resort. This Single Page Application (SPA) is used by staff to manage bookings, cabins, guests, and hotel operations.
 
 ---
 
